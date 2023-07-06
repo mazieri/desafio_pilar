@@ -1,0 +1,33 @@
+# to run: dart run package_rename
+
+package_rename_config:
+  android:
+    app_name: Dictionary
+    package_name: dev.efemazieri.dictionary
+    # override_old_package: com.example.example
+    # lang: kotlin
+
+#   ios:
+#     app_name: Dictionary
+#     bundle_name: Dictionary
+#     package_name: dev.efemazieri.dictionary
+
+#   linux:
+#     app_name: Dictionary
+#     package_name: dev.efemazieri.dictionary
+#     exe_name: dictionary
+
+#   macos:
+#     app_name: Dictionary
+#     package_name: dev.efemazieri.dictionary
+#     copyright_notice: efemazieri.dev © | 2023 | TODOS OS DIREITOS RESERVADOS
+
+#   web:
+#     app_name: Dictionary
+#     description: Desafio De App Para Vaga Flutter Na Pilar
+  
+#   windows:
+#     app_name: Dictionary
+#     organization: efemazieri.dev
+#     copyright_notice: efemazieri.dev © | 2023 | TODOS OS DIREITOS RESERVADOS
+#     exe_name: dictionary

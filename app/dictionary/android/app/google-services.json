@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1084350328261",
+    "project_id": "dictionary-coodesh",
+    "storage_bucket": "dictionary-coodesh.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1084350328261:android:cae1f9f127757fde13efac",
+        "android_client_info": {
+          "package_name": "dev.efemazieri.dictionary"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1084350328261-50b4ddmvf9ohorkhp47chs42j7vrf79p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD0pfK-bZEODFkzpTtyEzlG5FCt2P9s-Ec"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1084350328261-50b4ddmvf9ohorkhp47chs42j7vrf79p.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1084350328261-i6fnf3q59mgi9277t1m11g37kn1mbom3.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "dev.efemazieri.dictionary"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

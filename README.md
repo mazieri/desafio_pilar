@@ -5,7 +5,7 @@
 ## Sobre
 
 - Dictionary
-- Um App para listar palavras em inglês (utlizando a api [Words API](https://www.wordsapi.com)), bem como suas definições, sinônimos, derivação e afins
+- Um App para listar palavras em inglês (utlizando a api [Words API](https://www.wordsapi.com)), e exibir suas definições, sinônimos, derivação e afins
 - [Tecnologias usadas](#techs)
 - [Como instalar e usar](#como-instalar-e-usar)
 

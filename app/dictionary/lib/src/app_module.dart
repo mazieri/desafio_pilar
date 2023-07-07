@@ -8,6 +8,7 @@ class AppModule extends Module {
   List<Bind> get binds => [
         Bind.singleton((i) => FirebaseAnalytics.instance),
         Bind.singleton((i) => RemoteConfig()),
+        Bind.singleton((i) => WordsJsonImport()),
       ];
 
   @override
@@ -16,6 +17,16 @@ class AppModule extends Module {
           "/",
           module: SplashModule(),
           transition: TransitionType.noTransition,
+        ),
+        ModuleRoute(
+          "/layout1",
+          module: Layout1Module(),
+          transition: TransitionType.fadeIn,
+        ),
+        ModuleRoute(
+          "/layout2",
+          module: Layout2Module(),
+          transition: TransitionType.fadeIn,
         ),
         ModuleRoute(
           "/home",

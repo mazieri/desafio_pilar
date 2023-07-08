@@ -9,6 +9,7 @@ class AppModule extends Module {
         Bind.singleton((i) => FirebaseAnalytics.instance),
         Bind.singleton((i) => RemoteConfig()),
         Bind.singleton((i) => WordsJsonImport()),
+        Bind.singleton((i) => UnoHttp())
       ];
 
   @override

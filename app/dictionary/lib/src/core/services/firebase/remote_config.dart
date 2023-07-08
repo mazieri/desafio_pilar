@@ -15,7 +15,7 @@ class RemoteConfig {
     await _firebaseRemoteConfig.setConfigSettings(
       RemoteConfigSettings(
         fetchTimeout: const Duration(seconds: 30),
-        minimumFetchInterval: const Duration(minutes: 1),
+        minimumFetchInterval: const Duration(seconds: 30),
         // minimumFetchInterval: const Duration(days: 1),
       ),
     );

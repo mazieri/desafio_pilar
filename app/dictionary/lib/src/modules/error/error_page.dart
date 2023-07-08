@@ -13,11 +13,13 @@ class ErrorPage extends StatelessWidget {
       backgroundColor: const Color.fromARGB(255, 0, 0, 0),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Text(
-              "OPA, DEU ALGUM ERRO",
+              "Ops, have an Error",
               textAlign: TextAlign.center,
               style: TextStyle(
+                color: Colors.white,
                 fontSize: height > width ? width / 10 : height / 10,
                 fontWeight: FontWeight.bold,
               ),
@@ -28,7 +30,7 @@ class ErrorPage extends StatelessWidget {
             ElevatedButton(
               onPressed: () => Modular.to.navigate("/"),
               child: const Center(
-                child: Text("Voltar para a Página Inicial"),
+                child: Text("App Restart"),
               ),
             ),
           ],

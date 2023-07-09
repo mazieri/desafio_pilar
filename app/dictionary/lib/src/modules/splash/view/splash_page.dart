@@ -16,13 +16,13 @@ class _SplashPageState extends State<SplashPage> {
   void initState() {
     super.initState();
 
-    if (layout == "layout1") {
+    if (layout != "") {
       Future.delayed(const Duration(seconds: 2), () {
-        Modular.to.navigate("/words/");
+        Modular.to.navigate("/$layout/");
       });
     } else {
       Future.delayed(const Duration(seconds: 2), () {
-        Modular.to.navigate("/home/");
+        Modular.to.navigate("/error");
       });
     }
   }

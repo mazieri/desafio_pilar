@@ -25,10 +25,10 @@ class UnoHttp extends MyMethods {
           return response;
 
         case 404:
-          throw Exception("404");
+          throw Exception("404, $response");
 
         default:
-          throw Exception('Failed to load data');
+          throw Exception('Failed to load data, the return is $response');
       }
     } catch (e) {
       rethrow;

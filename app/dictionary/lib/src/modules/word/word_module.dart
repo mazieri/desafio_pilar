@@ -10,8 +10,10 @@ class WordModule extends Module {
   @override
   List<ModularRoute> get routes => [
         ChildRoute(
-          "/",
-          child: (_, args) => const WordPage(),
+          "/:clickWord",
+          child: (_, args) => WordPage(
+            clickWord: args.params["clickWord"],
+          ),
         ),
       ];
 }

@@ -10,6 +10,7 @@
 - Um App para listar palavras em inglês (utlizando a api [Words API](https://www.wordsapi.com)), e exibir suas definições, sinônimos, derivação e afins
 - [Tecnologias usadas](#techs)
 - [Como instalar e usar](#como-instalar-e-usar)
+- [Apresentação](https://www.loom.com/embed/6ce3d8965a1844c78a3d7516b4816200)
 
 ## Checkpoints
 

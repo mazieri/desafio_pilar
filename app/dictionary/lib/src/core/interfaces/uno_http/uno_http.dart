@@ -6,7 +6,7 @@ class UnoHttp extends MyMethods {
   final uno = Uno();
 
   @override
-  Future<Response> get(
+  Future<Response?> get(
     String url,
     Map<String, String> headers,
     Map<String, String> params,
@@ -24,12 +24,14 @@ class UnoHttp extends MyMethods {
         case 200:
           return response;
 
-        case 404:
-          throw Exception("404, $response");
+        case >= 400 && <= 499:
+          throw FormatException("4XX, $response");
 
         default:
-          throw Exception('Failed to load data, the return is $response');
+          throw FormatException('Failed to load data, the return is $response');
       }
+    } on UnoError catch (e) {
+      return e.response;
     } catch (e) {
       rethrow;
     }

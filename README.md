@@ -1,6 +1,8 @@
-# Mobile Challenge 🏅 - Pilar
+# Mobile Challenge 🏅 - [Pilar](https://www.soupilar.com.br)
 
 > This is a [challenge](https://lab.coodesh.com/challenges/apps/dictionary) by [Coodesh](https://coodesh.com/)
+
+[![Codemagic build status](https://api.codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/status_badge.svg)](https://codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/latest_build)
 
 ## Sobre
 
@@ -13,20 +15,20 @@
 
 ### Obrigatório - Você deverá atender aos seguintes casos de uso
 
-- [ ] Como usuário, devo ser capaz de visualizar uma lista de palavras com rolagem infinita
-- [ ] Como usuário, devo ser capaz de visualizar uma palavra, significados e a fonética
-- [ ] Como usuário, devo ser capaz de salvar a palavra como favorito
-- [ ] Como usuário, devo ser capaz de remover a palavra como favorito
-- [ ] Como usuário, devo ser capaz de visitar uma lista com as palavras que já vi anteriormente
-- [ ] A API não possui endpoint com a lista de palavras. Essa lista pode ser carregada em memória ou ser salva em banco de dados local ou remoto
-- [ ] Salvar em cache o resultado das requisições ao Words API, para agilizar a resposta em caso de buscas com parâmetros repetidos
-- [ ] Seguir o wireframe para a página de listagem dos dados. Pode-se alterar a posição dos itens, mantendo as funcionalidades solicitadas
+- [x] Como usuário, devo ser capaz de visualizar uma lista de palavras com rolagem infinita
+- [x] Como usuário, devo ser capaz de visualizar uma palavra, significados e a fonética
+- [x] Como usuário, devo ser capaz de salvar a palavra como favorito
+- [x] Como usuário, devo ser capaz de remover a palavra como favorito
+- [x] Como usuário, devo ser capaz de visitar uma lista com as palavras que já vi anteriormente
+- [x] A API não possui endpoint com a lista de palavras. Essa lista pode ser carregada em memória ou ser salva em banco de dados local ou remoto
+- [x] Salvar em cache o resultado das requisições ao Words API, para agilizar a resposta em caso de buscas com parâmetros repetidos
+- [x] Seguir o wireframe para a página de listagem dos dados. Pode-se alterar a posição dos itens, mantendo as funcionalidades solicitadas
   - ![wireframe](./img/wireframe.png)
 
 ### Diferencial
 
 - [ ] Implementar um tocador de audio utilizando, por exemplo, <https://responsivevoice.org/api> ou recursos nativos;
-- [ ] Utilizar alguma ferramenta de Injeção de Dependência;
+- [x] Utilizar alguma ferramenta de Injeção de Dependência;
 - [ ] Escrever Unit Tests ou E2E Test. Escolher a melhor abordagem e biblioteca;
 - [ ] Implementar login com usuário e senha e associar os favoritos e histórico ao ID do usuário, salvando essa informação em banco de dados local ou remoto
 
@@ -68,3 +70,24 @@
 - [package_rename](https://pub.dev/packages/package_rename)
 
 ## [Como instalar e usar](#sobre)
+
+### Localmente (clonando o repositório)
+
+- Clone este repositório (pode ser via HTTPS, SSH, CLI, abrindo no seu Github Desktop ou baixando o .ZIP)
+- Descompacte os arquivos, caso necessário
+- Acesse via terminal a pasta que acabou de criar
+- Abra algum emulador de sua preferência
+- Execute o comando `flutter devices` para saber o ID do seu emulador (logo na frente do nome)
+- Agora, estando na pasta raiz do app, execute o comando `flutter run -d ID_DO_EMULADOR`
+
+### Localmente (utilizando o APK)
+
+- [Baixe o APK](https://api.codemagic.io/artifacts/.eJwVwc2SgiAAAOB36e5MYEAdOqiluZptKiReGmyy0jEXf0J5-ma_b_Gw_tm13Cwnb7zto7Kp6LrNFci1BwZkDOUHaMzR4AoPK_CS-ohOUFMiPsYuojvtdlhoQtaY4XWSpp12Mvb0OZxXiv3SnKblzKAOGjY3TY_yCU0mH235R0kr1IvbXSMwGdMgGzyUqSUJrr3Yhf6xOJxth8nxvZQ_urrY7zSj3LnJS9Gq1MsNv6_LusGX48q97zELHT3d4f4KnolSsQjjx4iZ-3lWHYl8mMlZjHd0ONdBwU-y2Ewc9Ab0PaPEU25JGjs3VMYmNLNXAswEXbtQVy3rTGu7XXwBr1ViGg.8jqdhdedxM-Vk11wa3hJrEh8dBA)
+- Abre seu emulador de preferência
+- Arresta o APK no emulador ou faça a instalação pelo menu do próprio
+
+### Web
+
+- Acessar o [site do app](https://desafio_pilar.codemagic.app/)
+- Caso queira ter uma experiência mais próxima do mobile/celular, aperte `F12` ou `botão direito do mouse > inspecionar elemento`
+- Aperte `CTRL/COMMAND + SHIFT + M` ou na "caixa" de inspeção, no canto superior esquerdo, tem desenho de um table com um celular na frente, ai é só clicar nele

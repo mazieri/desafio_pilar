@@ -53,7 +53,9 @@ class WordPage extends StatelessWidget {
             arguments: indexNextWord,
           );
         },
-        label: const Text("Próximo"),
+        label: const Text(
+          "Próximo",
+        ),
       ),
       body: FutureBuilder(
         future: Future.delayed(
@@ -95,7 +97,9 @@ class WordPage extends StatelessWidget {
                             ),
                           ),
                           Divider(
-                            color: Colors.white.withOpacity(0.5),
+                            indent: 1,
+                            color: const Color.fromARGB(255, 125, 125, 125)
+                                .withOpacity(0.5),
                           ),
                           const Text(
                             "Meanings",
@@ -110,7 +114,9 @@ class WordPage extends StatelessWidget {
                             physics: const NeverScrollableScrollPhysics(),
                             itemCount: snapshot.data["results"].length,
                             separatorBuilder: (_, index) => Divider(
-                              color: Colors.white.withOpacity(0.5),
+                              indent: 1,
+                              color: const Color.fromARGB(255, 125, 125, 125)
+                                  .withOpacity(0.5),
                             ),
                             itemBuilder: (_, index) {
                               int showIndex = index + 1;
@@ -123,8 +129,8 @@ class WordPage extends StatelessWidget {
                               return Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  RichText(
-                                    text: TextSpan(
+                                  Text.rich(
+                                    TextSpan(
                                       text: "$showIndexº: ",
                                       style: const TextStyle(
                                         fontSize: 20,
@@ -159,12 +165,15 @@ class WordPage extends StatelessWidget {
                       ),
                     ),
                   )
-                : Center(
-                    child: Text(
-                      "Sorry, but ${snapshot.data["message"]}... \n Please, try the next word or return back",
-                      textAlign: TextAlign.center,
-                      style: const TextStyle(
-                        fontSize: 25,
+                : Padding(
+                    padding: const EdgeInsets.all(10),
+                    child: Center(
+                      child: Text(
+                        "Sorry, but ${snapshot.data["message"]}... \n Please, try the next word or return back",
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 25,
+                        ),
                       ),
                     ),
                   );

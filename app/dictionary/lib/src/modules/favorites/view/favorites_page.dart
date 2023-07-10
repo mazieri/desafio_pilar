@@ -19,33 +19,46 @@ class FavoritesPage extends StatelessWidget {
         title: const Text("Favorites"),
       ),
       body: Observer(builder: (_) {
-        return Scrollbar(
-          child: ListView.separated(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-            itemCount: favoritesStore.favoritesList.length,
-            separatorBuilder: (_, index) => Divider(
-              color: Colors.white.withOpacity(0.5),
-            ),
-            itemBuilder: (_, index) {
-              String wordIndex = favoritesStore.favoritesList[index];
-
-              return Card(
-                child: ListTile(
+        return favoritesStore.favoritesList.isEmpty
+            ? const Center(
+                child: Card(
+                  child: ListTile(
                     title: Text(
-                      wordIndex,
+                      "Oops, you still haven't bookmarked a word to have favorites !",
+                      textAlign: TextAlign.center,
                     ),
-                    trailing: IconButton(
-                      onPressed: () {
-                        favoritesStore.remove(wordIndex);
-                      },
-                      icon: const Icon(
-                        Icons.favorite,
-                      ),
-                    )),
+                  ),
+                ),
+              )
+            : Scrollbar(
+                child: ListView.separated(
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                  itemCount: favoritesStore.favoritesList.length,
+                  separatorBuilder: (_, index) => Divider(
+                    indent: 1,
+                    color: const Color.fromARGB(255, 125, 125, 125)
+                        .withOpacity(0.5),
+                  ),
+                  itemBuilder: (_, index) {
+                    String wordIndex = favoritesStore.favoritesList[index];
+
+                    return Card(
+                      child: ListTile(
+                          title: Text(
+                            wordIndex,
+                          ),
+                          trailing: IconButton(
+                            onPressed: () {
+                              favoritesStore.remove(wordIndex);
+                            },
+                            icon: const Icon(
+                              Icons.favorite,
+                            ),
+                          )),
+                    );
+                  },
+                ),
               );
-            },
-          ),
-        );
       }),
     );
   }

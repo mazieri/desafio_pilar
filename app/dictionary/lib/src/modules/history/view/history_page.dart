@@ -19,27 +19,40 @@ class HistoryPage extends StatelessWidget {
         title: const Text("History"),
       ),
       body: Observer(builder: (_) {
-        return Scrollbar(
-          child: ListView.separated(
-            padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-            itemCount: historyStore.historyList.length,
-            separatorBuilder: (_, index) => Divider(
-              color: Colors.white.withOpacity(0.5),
-            ),
-            itemBuilder: (_, index) {
-              String wordIndex = historyStore.historyList[index];
-
-              return Card(
-                child: ListTile(
-                  title: Text(
-                    wordIndex,
-                    textAlign: TextAlign.center,
+        return historyStore.historyList.isEmpty
+            ? const Center(
+                child: Card(
+                  child: ListTile(
+                    title: Text(
+                      "Oops, you still haven't visited a word to have history !",
+                      textAlign: TextAlign.center,
+                    ),
                   ),
                 ),
+              )
+            : Scrollbar(
+                child: ListView.separated(
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
+                  itemCount: historyStore.historyList.length,
+                  separatorBuilder: (_, index) => Divider(
+                    indent: 1,
+                    color: const Color.fromARGB(255, 125, 125, 125)
+                        .withOpacity(0.5),
+                  ),
+                  itemBuilder: (_, index) {
+                    String wordIndex = historyStore.historyList[index];
+
+                    return Card(
+                      child: ListTile(
+                        title: Text(
+                          wordIndex,
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    );
+                  },
+                ),
               );
-            },
-          ),
-        );
       }),
     );
   }

@@ -3,16 +3,18 @@ class WordModel {
   List<Result>? results;
   Syllables? syllables;
   Pronunciation? pronunciation;
+  String? message;
 
   WordModel({
     this.word,
     this.results,
     this.syllables,
     this.pronunciation,
+    this.message,
   });
 
   factory WordModel.fromJson(Map<String, dynamic> json) => WordModel(
-        word: json["word"],
+        word: json["word"] ?? "",
         results: json["results"] == null
             ? []
             : List<Result>.from(
@@ -23,6 +25,7 @@ class WordModel {
         pronunciation: json["pronunciation"] == null
             ? null
             : Pronunciation.fromJson(json["pronunciation"]),
+        message: json["message"] ?? "",
       );
 
   Map<String, dynamic> toJson() => {
@@ -32,6 +35,7 @@ class WordModel {
             : List<dynamic>.from(results!.map((x) => x.toJson())),
         "syllables": syllables?.toJson(),
         "pronunciation": pronunciation?.toJson(),
+        "message": message,
       };
 }
 
@@ -71,8 +75,8 @@ class Result {
   });
 
   factory Result.fromJson(Map<String, dynamic> json) => Result(
-        definition: json["definition"],
-        partOfSpeech: json["partOfSpeech"],
+        definition: json["definition"] ?? "",
+        partOfSpeech: json["partOfSpeech"] ?? "",
         synonyms: json["synonyms"] == null
             ? []
             : List<String>.from(json["synonyms"]!.map((x) => x)),
@@ -117,7 +121,7 @@ class Syllables {
   });
 
   factory Syllables.fromJson(Map<String, dynamic> json) => Syllables(
-        count: json["count"],
+        count: json["count"] ?? 0,
         list: json["list"] == null
             ? []
             : List<String>.from(json["list"]!.map((x) => x)),

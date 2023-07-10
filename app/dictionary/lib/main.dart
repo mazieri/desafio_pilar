@@ -26,8 +26,8 @@ Future<void> main() async {
     (options) {
       options
         ..dsn = dsn
-        ..release = 'dictionary0.0.1+3'
-        ..environment = 'dev'
+        ..release = 'dictionary@1.0.0'
+        ..environment = 'prod'
         ..tracesSampleRate = tracesSampleRate
         ..enableAutoPerformanceTracing = true
         ..autoAppStart = true

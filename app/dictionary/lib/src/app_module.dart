@@ -9,7 +9,10 @@ class AppModule extends Module {
         Bind.singleton((i) => FirebaseAnalytics.instance),
         Bind.singleton((i) => RemoteConfig()),
         Bind.singleton((i) => WordsJsonImport()),
-        Bind.singleton((i) => UnoHttp())
+        Bind.singleton((i) => SharedPrefService()),
+        Bind.singleton((i) => UnoHttp()),
+        Bind.singleton((i) => HistoryStore()),
+        Bind.singleton((i) => FavoritesStore()),
       ];
 
   @override
@@ -22,11 +25,6 @@ class AppModule extends Module {
         ModuleRoute(
           "/layout1",
           module: Layout1Module(),
-          transition: TransitionType.fadeIn,
-        ),
-        ModuleRoute(
-          "/layout2",
-          module: Layout2Module(),
           transition: TransitionType.fadeIn,
         ),
         ModuleRoute(

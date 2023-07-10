@@ -11,7 +11,8 @@ class WordsPage extends StatelessWidget {
     // var height = MediaQuery.sizeOf(context).height;
     // var width = MediaQuery.sizeOf(context).width;
 
-    var wordsJson = Modular.get<WordsJsonImport>();
+    final wordsJson = Modular.get<WordsJsonImport>();
+    final historyStore = Modular.get<HistoryStore>();
 
     return Scaffold(
       appBar: AppBar(
@@ -43,11 +44,15 @@ class WordsPage extends StatelessWidget {
                           child: InkWell(
                             borderRadius: BorderRadius.circular(10),
                             onTap: () async {
-                              Modular.to.pushNamed("/word/$clickWord");
+                              historyStore.add(clickWord);
+                              Modular.to.pushNamed(
+                                "/word/$clickWord",
+                                arguments: index,
+                              );
                             },
                             child: Center(
                               child: Text(
-                                "${wordsJson.getWordsList[index]}",
+                                clickWord,
                               ),
                             ),
                           ),

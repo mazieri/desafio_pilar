@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-// import 'package:lottie/lottie.dart'; //TODO: lottie
+import 'package:lottie/lottie.dart';
 
 import '../../../src_exports.dart';
 
@@ -29,15 +29,12 @@ class _SplashPageState extends State<SplashPage> {
 
   @override
   Widget build(BuildContext context) {
-    return const LinearGradientBackground(
-      widget: Center(
-          // child: Lottie.asset(
-          //   "",
-          //   fit: BoxFit.fitHeight,
-          //   repeat: false,
-          //   frameRate: FrameRate(15),
-          // ),
-          ),
+    return Center(
+      child: Lottie.asset(
+        "assets/lottie/loading.json",
+        fit: BoxFit.fitHeight,
+        repeat: false,
+      ),
     );
   }
 }

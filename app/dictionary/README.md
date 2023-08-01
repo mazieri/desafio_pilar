@@ -2,6 +2,8 @@
 
 Desafio De App Para Vaga Flutter Na Pilar
 
+## FIREBASE OFF
+
 ## Info
 
 - Organization: [efemazieri.dev](https://efemazieri.dev)

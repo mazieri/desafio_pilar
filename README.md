@@ -4,6 +4,8 @@
 
 [![Codemagic build status](https://api.codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/status_badge.svg)](https://codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/latest_build)
 
+> FIREBASE OFF
+
 ## Sobre
 
 - Dictionary

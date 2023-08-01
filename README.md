@@ -4,7 +4,7 @@
 
 [![Codemagic build status](https://api.codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/status_badge.svg)](https://codemagic.io/apps/64abcebef2103e310668a077/64abcebef2103e310668a076/latest_build)
 
-> FIREBASE OFF
+> FIREBASE/APP OFF
 
 ## Sobre
 
@@ -74,23 +74,24 @@
 
 ## [Como instalar e usar](#sobre)
 
-### Localmente (clonando o repositório)
+### Localmente (clonando o repositório) (OFF)
 
-- Clone este repositório (pode ser via HTTPS, SSH, CLI, abrindo no seu Github Desktop ou baixando o .ZIP)
+<!--- - Clone este repositório (pode ser via HTTPS, SSH, CLI, abrindo no seu Github Desktop ou baixando o .ZIP)
 - Descompacte os arquivos, caso necessário
 - Acesse via terminal a pasta que acabou de criar
 - Abra algum emulador de sua preferência
 - Execute o comando `flutter devices` para saber o ID do seu emulador (logo na frente do nome)
-- Agora, estando na pasta raiz do app, execute o comando `flutter run -d ID_DO_EMULADOR`
+- Agora, estando na pasta raiz do app, execute o comando `flutter run -d ID_DO_EMULADOR` -->
 
-### Localmente (utilizando o APK)
+### Localmente (utilizando o APK) (OFF)
 
-- [Baixe o APK](https://api.codemagic.io/artifacts/.eJwVwc2SgiAAAOB36e5MYEAdOqiluZptKiReGmyy0jEXf0J5-ma_b_Gw_tm13Cwnb7zto7Kp6LrNFci1BwZkDOUHaMzR4AoPK_CS-ohOUFMiPsYuojvtdlhoQtaY4XWSpp12Mvb0OZxXiv3SnKblzKAOGjY3TY_yCU0mH235R0kr1IvbXSMwGdMgGzyUqSUJrr3Yhf6xOJxth8nxvZQ_urrY7zSj3LnJS9Gq1MsNv6_LusGX48q97zELHT3d4f4KnolSsQjjx4iZ-3lWHYl8mMlZjHd0ONdBwU-y2Ewc9Ab0PaPEU25JGjs3VMYmNLNXAswEXbtQVy3rTGu7XXwBr1ViGg.8jqdhdedxM-Vk11wa3hJrEh8dBA)
+<!--- - [Baixe o APK](https://api.codemagic.io/artifacts/.eJwVwc2SgiAAAOB36e5MYEAdOqiluZptKiReGmyy0jEXf0J5-ma_b_Gw_tm13Cwnb7zto7Kp6LrNFci1BwZkDOUHaMzR4AoPK_CS-ohOUFMiPsYuojvtdlhoQtaY4XWSpp12Mvb0OZxXiv3SnKblzKAOGjY3TY_yCU0mH235R0kr1IvbXSMwGdMgGzyUqSUJrr3Yhf6xOJxth8nxvZQ_urrY7zSj3LnJS9Gq1MsNv6_LusGX48q97zELHT3d4f4KnolSsQjjx4iZ-3lWHYl8mMlZjHd0ONdBwU-y2Ewc9Ab0PaPEU25JGjs3VMYmNLNXAswEXbtQVy3rTGu7XXwBr1ViGg.8jqdhdedxM-Vk11wa3hJrEh8dBA)
 - Abre seu emulador de preferência
-- Arresta o APK no emulador ou faça a instalação pelo menu do próprio
+- Arresta o APK no emulador ou faça a instalação pelo menu do próprio -->
 
-### Web
+### Web (OFF)
 
-- Acessar o [site do app](https://desafio_pilar.codemagic.app/)
+<!--- - Acessar o [site do app](https://desafio_pilar.codemagic.app/)
 - Caso queira ter uma experiência mais próxima do mobile/celular, aperte `F12` ou `botão direito do mouse > inspecionar elemento`
-- Aperte `CTRL/COMMAND + SHIFT + M` ou na "caixa" de inspeção, no canto superior esquerdo, tem desenho de um table com um celular na frente, ai é só clicar nele
+- Aperte `CTRL/COMMAND + SHIFT + M` ou na "caixa" de inspeção, no canto superior esquerdo, tem desenho de um table com um celular na frente, ai é só clicar nele -->
+

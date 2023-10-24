@@ -9,8 +9,10 @@ class ErrorPage extends StatelessWidget {
     var height = MediaQuery.sizeOf(context).height;
     var width = MediaQuery.sizeOf(context).width;
 
+    const Color back = Color.fromARGB(255, 0, 0, 0);
+
     return Scaffold(
-      backgroundColor: const Color.fromARGB(255, 0, 0, 0),
+      backgroundColor: back,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,

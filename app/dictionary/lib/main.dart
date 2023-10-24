@@ -1,26 +1,32 @@
-import 'package:flutter/foundation.dart';
+// import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
+import 'src/core/interfaces/uno_http/teste.dart';
 import 'src/src_exports.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  kIsWeb == true
-      ? await Firebase.initializeApp(
-          options: const FirebaseOptions(
-            apiKey: apiKey,
-            appId: appId,
-            messagingSenderId: messagingSenderId,
-            projectId: projectId,
-          ),
-        )
-      : await Firebase.initializeApp();
+  // kIsWeb == true
+  //     ? await Firebase.initializeApp(
+  //         options: const FirebaseOptions(
+  //           apiKey: apiKey,
+  //           appId: appId,
+  //           messagingSenderId: messagingSenderId,
+  //           projectId: projectId,
+  //         ),
+  //       )
+  //     :
+  await Firebase.initializeApp();
 
   await RemoteConfig().start();
+
+  final httpTeste = TesteHttp(UnoHttp());
+
+  httpTeste.getXcoisa();
 
   await SentryFlutter.init(
     (options) {

@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 ThemeData lightTheme() => ThemeData(
       useMaterial3: true,
-      scaffoldBackgroundColor: Colors.white,
+      scaffoldBackgroundColor: const Color.fromARGB(255, 255, 255, 255),
       // Colors.primaries[Random().nextInt(Colors.primaries.length)],
       // Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1),
       // floatingActionButtonTheme: const FloatingActionButtonThemeData(
@@ -20,12 +20,11 @@ ThemeData lightTheme() => ThemeData(
       //   bodyColor: Colors.black,
       //   displayColor: Colors.purple,
       // ),
-      colorScheme: ColorScheme.light(
+      colorScheme: const ColorScheme.light(
         brightness: Brightness.light,
-        background: const Color.fromARGB(255, 255, 255, 255),
+        background: Color.fromARGB(255, 255, 255, 255),
         // primary: Color.fromARGB(255, 124, 40, 172),
-        primary:
-            Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1),
+        primary: Color.fromARGB(255, 141, 55, 184),
         onSurface: Colors.black,
         // secondary: const Color.fromARGB(255, 202, 18, 18),
       ),
@@ -46,8 +45,7 @@ ThemeData darkTheme() => ThemeData(
       // ),
       colorScheme: ColorScheme.dark(
         brightness: Brightness.dark,
-        primary:
-            Color((Random().nextDouble() * 0xFFFFFF).toInt()).withOpacity(1),
+        primary: randomColor().withOpacity(1),
         // primaryContainer: Color.fromARGB(255, 218, 171, 171),
         // onPrimaryContainer: Color.fromARGB(255, 0, 0, 0),
         // secondary: const Color.fromARGB(255, 255, 255, 255),
@@ -63,3 +61,18 @@ ThemeData darkTheme() => ThemeData(
         // onError: const Color.fromARGB(255, 100, 100, 100),
       ),
     );
+
+// if you want to create a random color, just uncomment this function
+Color randomColor() {
+  Color randomColor = Color((Random().nextDouble() * 0xFFFFFF).toInt());
+  return randomColor;
+}
+
+Color lightRandomColor() {
+  int a = Random().nextInt(255);
+  int r = Random().nextInt(255);
+  int g = Random().nextInt(255);
+  int b = Random().nextInt(255);
+  Color randomColor = Color.fromARGB(a, r, g, b);
+  return randomColor;
+}

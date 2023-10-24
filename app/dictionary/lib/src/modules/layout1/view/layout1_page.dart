@@ -37,6 +37,8 @@ class _Layout1PageState extends State<Layout1Page> {
     // var height = MediaQuery.sizeOf(context).height;
     // var width = MediaQuery.sizeOf(context).width;
 
+    const Icon fav = Icon(Icons.favorite_border);
+
     return Scaffold(
       body: const RouterOutlet(),
       bottomNavigationBar: BottomNavigationBar(
@@ -53,7 +55,7 @@ class _Layout1PageState extends State<Layout1Page> {
           ),
           BottomNavigationBarItem(
             label: "Favorites",
-            icon: Icon(Icons.favorite_border),
+            icon: fav,
           ),
         ],
       ),
